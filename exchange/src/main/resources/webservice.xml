@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://cxf.apache.org/transports/http/configuration
+       http://cxf.apache.org/schemas/configuration/http-conf.xsd
+       http://cxf.apache.org/jaxws
+       http://cxf.apache.org/schemas/jaxws.xsd"
+       default-lazy-init="true">
+
+    <bean id="clientPasswordCallback" class="com.wumin.boot152.cxf.ClientPasswordCallbackHandler"/>
+    <bean id="wss4jOutInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+        <constructor-arg>
+            <map>
+                <!-- 用户认证（明文密码） -->
+                <entry key="action" value="UsernameToken"/>
+                <entry key="user" value="MAP"/>
+                <entry key="passwordType" value="PasswordText"/>
+                <entry key="passwordCallbackRef" value-ref="clientPasswordCallback"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <http-conf:conduit name="*.http-conduit">
+        <http-conf:client ConnectionTimeout="36000" ReceiveTimeout="120000"/>
+    </http-conf:conduit>
+    <jaxws:client id="manager" serviceClass="jp550020.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileGetF0101InformationManager"
+                  address="http://172.16.100.157:6061/PY812/GetF0101InformationManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <jaxws:client id="fmanager" serviceClass="jp55m012.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileFrameworkAgreementManger"
+                  address="http://172.16.100.157:6061/PY812/FrameworkAgreementManger">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileSaleOrderCloseMAPManager"
+                  serviceClass="jp55m015.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileSaleOrderCloseMAPManager"
+                  address="http://172.16.100.157:6061/PY812/SaleOrderCloseMAPManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileSalesOrderMAPManager"
+                  serviceClass="jp55m005.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileSalesOrderMAPManager"
+                  address="http://172.16.100.157:6061/PY812/SalesOrderMAPManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileSalesReturnOrderMAPManager"
+                  serviceClass="jp55m009.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileSalesReturnOrderMAPManager"
+                  address="http://172.16.100.157:6061/PY812/SalesReturnOrderMAPManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--销售合同-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileSaleContractManager"
+                  serviceClass="jp55m002.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileSaleContractManager"
+                  address="http://172.16.100.157:6061/PY812/SaleContractManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--客户授信订单逾期检查-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileCustomerCreditVerdueCheckManager"
+                  serviceClass="jp55m010.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileCustomerCreditVerdueCheckManager"
+                  address="http://172.16.100.157:6061/PY812/CustomerCreditVerdueCheckManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--销售订单收款状态同步-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFilePSalesOrderReceiptStatusMapManager"
+                  serviceClass="jp55m011.bssv.e1.oracle.OracleE1SBFSEIPkgBldFilePSalesOrderReceiptStatusMapManager"
+                  address="http://172.16.100.157:6061/PY812/PSalesOrderReceiptStatusMapManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--库存-盘亏盘盈调整单-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileInventoryAdjustmentManager"
+                  serviceClass="jp55m001.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileInventoryAdjustmentManager"
+                  address="http://172.16.100.157:6061/PY812/InventoryAdjustmentManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--加工单-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileProcessingOrdersMAPManager"
+                  serviceClass="jp55m008.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileProcessingOrdersMAPManager"
+                  address="http://172.16.100.157:6061/PY812/ProcessingOrdersMAPManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--销售出库-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileShipmentConfirmationMAPManager"
+                  serviceClass="jp55m006.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileShipmentConfirmationMAPManager"
+                  address="http://172.16.100.157:6061/PY812/ShipmentConfirmationMAPManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--定金转货款-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileDepositConvertPaymentManager"
+                  serviceClass="jp55m003.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileDepositConvertPaymentManager"
+                  address="http://172.16.100.157:6061/PY812/DepositConvertPaymentManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+    <!--种植户信息同步到JDE-->
+    <jaxws:client id="oracleE1SBFSEIPkgBldFileGrowersMasterManager"
+                  serviceClass="jp55m016.bssv.e1.oracle.OracleE1SBFSEIPkgBldFileGrowersMasterManager"
+                  address="http://172.16.100.157:6061/PY812/GrowersMasterManager">
+        <jaxws:outInterceptors>
+            <ref bean="wss4jOutInterceptor"/>
+        </jaxws:outInterceptors>
+    </jaxws:client>
+</beans>

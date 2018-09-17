@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--生成实体及mapper-->
+<generatorConfiguration>
+	<!--<properties resource="application.properties" />-->
+
+	<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<!--mapper模板文件-->
+			<property name="mappers" value="com.wumin.boot152.common.util.BaseMapper" />
+		</plugin>
+		<!--JDBC连接驱动，url,username,password-->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/demo" userId="wumin" password="wumin">
+		</jdbcConnection>
+		<!--实体生成位置-->
+		<javaModelGenerator targetPackage="com.wumin.boot152.common.entity" targetProject="src/main/java" >
+			<property name="enableSubPackages" value="true"/>
+			<property name="trimStrings" value="true"/>
+			<!--继承的基类-->
+			<property name="rootClass" value="com.wumin.boot152.common.entity.BaseEntity"/>
+		</javaModelGenerator>
+		<!--mapper.xml映射文件生成位置-->
+		<sqlMapGenerator targetPackage="com.wumin.boot152.common.mapper" targetProject="src/main/java" >
+			<property name="enableSubPackages" value="true"/>
+		</sqlMapGenerator>
+		<!--mapper.java dao文件生成位置-->
+		<javaClientGenerator targetPackage="com.wumin.boot152.common.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="%">
+			<!--mysql 配置 -->
+			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
+			<!--oracle 配置 -->
+			<!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/> -->
+		</table>
+	</context>
+</generatorConfiguration>

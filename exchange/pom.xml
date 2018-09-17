@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>myboot152</artifactId>
+        <groupId>com.wumin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>exchange</artifactId>
+
+    <properties>
+        <cxf.version>3.1.12</cxf.version>
+        <!--<cxf.url>http://localhost:9091/webService</cxf.url>-->
+        <cxf.url>http://172.16.100.157:6061/PY812</cxf.url>
+        <org.redisson>3.5.0</org.redisson>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.wumin</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--redission锁依赖-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${org.redisson}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+        <!-- cxf webservice接口编译依赖 -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>${cxf.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-core</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-ws-security</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+    </dependencies>
+   <build>
+       <resources>
+           <resource>
+               <directory>src/main/java</directory>
+               <includes>
+                   <include>**/*.xml</include>
+               </includes>
+               <filtering>false</filtering>
+           </resource>
+           <resource>
+               <directory>src/main/resources</directory>
+           </resource>
+       </resources>
+
+       <plugins>
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+           </plugin>
+           <!-- 指定多个源代码目录、多个资源文件目录 -->
+           <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>build-helper-maven-plugin</artifactId>
+               <version>1.8</version>
+               <executions>
+                   <execution>
+                       <id>add-source</id>
+                       <phase>generate-sources</phase>
+                       <goals>
+                           <goal>add-source</goal>
+                       </goals>
+                       <configuration>
+                           <sources>
+                               <source>src/java/main</source>
+                               <!--cxf webservice 编译后存放位置-->
+                               <source>${basedir}/src/generated/cxf</source>
+                           </sources>
+                       </configuration>
+                   </execution>
+               </executions>
+           </plugin>
+            <!--cxf webservice插件-->
+           <plugin>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-codegen-plugin</artifactId>
+               <version>${cxf.version}</version>
+               <executions>
+                   <execution>
+                       <id>generate-sources</id>
+                       <phase>generate-sources</phase>
+                       <configuration>
+                           <!--存放位置-->
+                           <sourceRoot>${basedir}/src/generated/cxf</sourceRoot>
+                           <wsdlOptions>
+                               <wsdlOption>
+                                   <!--别人的webservice接口地址-->
+                                   <wsdl>${cxf.url}/SaleOrderCloseMAPManager?wsdl</wsdl>
+                                   <extendedSoapHeaders>true</extendedSoapHeaders>
+                                   <noAddressBinding>true</noAddressBinding>
+                                   <extraargs>
+                                       <extraarg>-client</extraarg>
+                                   </extraargs>
+                               </wsdlOption>
+
+                           </wsdlOptions>
+                       </configuration>
+                       <goals>
+                           <goal>wsdl2java</goal>
+                       </goals>
+                   </execution>
+               </executions>
+           </plugin>
+
+       </plugins>
+   </build>
+
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wumin.boot152.common.mapper.RolePermissionsAssoMapper" >
+  <resultMap id="BaseResultMap" type="com.wumin.boot152.common.entity.RolePermissionsAsso" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="permissions_id" property="permissionsId" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>
