@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>myboot152</artifactId>
+        <groupId>com.wumin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>zipkin-demo</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.wumin</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-core</artifactId>
+            <version>3.9.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.zipkin.java</groupId>
+                    <artifactId>zipkin</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-spancollector-http</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <dependency>
+        <groupId>io.zipkin.brave</groupId>
+        <artifactId>brave-web-servlet-filter</artifactId>
+        <version>3.9.0</version>
+        </dependency>
+        <dependency>
+        <groupId>io.zipkin.brave</groupId>
+        <artifactId>brave-okhttp</artifactId>
+        <version>3.9.0</version>
+        </dependency>
+    </dependencies>
+
+</project>

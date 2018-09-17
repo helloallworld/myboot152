@@ -12,6 +12,7 @@
         <module name="dubbo-server" />
         <module name="exchange" />
         <module name="main" />
+        <module name="zipkin-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -22,6 +23,7 @@
       <module name="exchange" target="1.8" />
       <module name="main" target="1.8" />
       <module name="myboot152" target="1.8" />
+      <module name="zipkin-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
