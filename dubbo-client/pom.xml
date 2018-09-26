@@ -44,6 +44,56 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--zipkin链路监控-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <!--发送zipkin的包-->
+        <dependency>
+            <groupId>io.zipkin.reporter2</groupId>
+            <artifactId>zipkin-sender-okhttp3</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+        <!--springmvc拦截-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-instrumentation-spring-webmvc</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <!--&lt;!&ndash;dubbo拦截&ndash;&gt;-->
+        <!--<dependency>-->
+        <!--<groupId>io.zipkin.brave</groupId>-->
+        <!--<artifactId>brave-instrumentation-dubbo</artifactId>-->
+        <!--<version>4.9.1</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-core</artifactId>
+            <version>4.9.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.zipkin.java</groupId>
+                    <artifactId>zipkin</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-spancollector-http</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-web-servlet-filter</artifactId>
+            <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-okhttp</artifactId>
+            <version>4.9.1</version>
+        </dependency>
 
         <!-- Junit -->
         <dependency>

@@ -1,5 +1,6 @@
 package com.wumin.boot152;
 
+import com.wumin.boot152.dubbo.zipkin.adapters.EnableDubboTrace;
 import com.wumin.boot152.service.ClientServiceImp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
