@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo-server</artifactId>
-
+    <artifactId>dubbo-service2</artifactId>
     <properties>
         <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
         <brave-verson>4.9.1</brave-verson>
@@ -30,9 +29,9 @@
             <version>${dubbo-spring-boot}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.alibaba.boot</groupId>-->
-            <!--<artifactId>dubbo-spring-boot-starter</artifactId>-->
-            <!--<version>0.1.0</version>-->
+        <!--<groupId>com.alibaba.boot</groupId>-->
+        <!--<artifactId>dubbo-spring-boot-starter</artifactId>-->
+        <!--<version>0.1.0</version>-->
         <!--</dependency>-->
 
         <!-- Spring Boot Web 依赖 -->
@@ -80,9 +79,9 @@
         </dependency>
         <!--&lt;!&ndash;dubbo拦截&ndash;&gt;-->
         <!--<dependency>-->
-            <!--<groupId>io.zipkin.brave</groupId>-->
-            <!--<artifactId>brave-instrumentation-dubbo</artifactId>-->
-            <!--<version>4.9.1</version>-->
+        <!--<groupId>io.zipkin.brave</groupId>-->
+        <!--<artifactId>brave-instrumentation-dubbo</artifactId>-->
+        <!--<version>4.9.1</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>io.zipkin.brave</groupId>

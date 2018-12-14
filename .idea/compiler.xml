@@ -10,6 +10,7 @@
         <module name="dubbo-api" />
         <module name="dubbo-client" />
         <module name="dubbo-server" />
+        <module name="dubbo-service2" />
         <module name="exchange" />
         <module name="main" />
         <module name="zipkin-demo" />
@@ -20,6 +21,7 @@
       <module name="dubbo-api" target="1.8" />
       <module name="dubbo-client" target="1.8" />
       <module name="dubbo-server" target="1.8" />
+      <module name="dubbo-service2" target="1.8" />
       <module name="exchange" target="1.8" />
       <module name="main" target="1.8" />
       <module name="myboot152" target="1.8" />

@@ -12,8 +12,6 @@ import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.http.HttpServletRequest;
-
 @Configuration
 public class ZipkinConfig {
     //span（一次请求信息或者一次链路调用）信息收集器
@@ -30,7 +28,7 @@ public class ZipkinConfig {
     //作为各调用链路，只需要负责将指定格式的数据发送给zipkin
     @Bean
     public Brave brave(SpanCollector spanCollector) {
-        Brave.Builder builder = new Brave.Builder("serviceName-SERVER01");//指定serviceName
+        Brave.Builder builder = new Brave.Builder("serviceName-SERVER02");//指定serviceName
         builder.spanCollector(spanCollector);
         builder.traceSampler(Sampler.create(1));//采集率
         return builder.build();
