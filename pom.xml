@@ -17,6 +17,7 @@
         <module>dubbo-client</module>
         <module>zipkin-demo</module>
         <module>dubbo-service2</module>
+        <module>design-pattern</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

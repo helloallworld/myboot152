@@ -1,0 +1,5 @@
+abstract_factory  :抽象工厂模式
+builder           :建造者模式
+factory           :工厂模式
+modle_method      :模板方法模式
+single            :单例模式
