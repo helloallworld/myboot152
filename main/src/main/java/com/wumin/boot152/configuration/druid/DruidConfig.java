@@ -15,6 +15,8 @@ import javax.sql.DataSource;
 
 /**
  * druid连接池黑白名单，用户名密码（设置后只有指定ip可以通过druid的页面查看数据库的一些状态）
+ *
+ * 使用tkmybatis时，tkmybatis会使用Druid的连接池获取连接。
  */
 @Configuration
 public class DruidConfig {

@@ -33,7 +33,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.13.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongo-java-driver:3.4.2" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.24" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.24" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-mail:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.7.RELEASE" level="project" />
@@ -108,6 +107,8 @@
     <orderEntry type="library" name="Maven: com.google.zxing:javase:3.3.3" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.72" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.jai-imageio:jai-imageio-core:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.crazycake:shiro-redis:2.8.24" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.24" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.11" level="project" />

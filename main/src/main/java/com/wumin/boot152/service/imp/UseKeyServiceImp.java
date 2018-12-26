@@ -10,6 +10,7 @@ import com.wumin.boot152.entity.FirmKey;
 import com.wumin.boot152.service.UseKeyService;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.crypto.BadPaddingException;
@@ -20,7 +21,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
-
+@Service
 public class UseKeyServiceImp implements UseKeyService {
     @Resource
     MongoTemplate mongoTemplate;

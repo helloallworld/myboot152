@@ -14,7 +14,10 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * redis资源库实现类,获取redis连接
+ * redis资源库实现类
+ *
+ * 引入JedisConfiguration中配置的redis的连接池
+ * 从连接池中取出一个连接
  * @author Administrator
  *
  */

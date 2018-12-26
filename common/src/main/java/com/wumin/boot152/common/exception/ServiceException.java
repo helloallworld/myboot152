@@ -2,6 +2,8 @@ package com.wumin.boot152.common.exception;
 
 /**
  * 业务异常
+ *
+ * 在  com.wumin.boot152.common.web.DefaultExceptionResolver中对exception进行统一处理
  */
 public class ServiceException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
