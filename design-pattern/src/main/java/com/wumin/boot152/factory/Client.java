@@ -1,7 +1,7 @@
 package com.wumin.boot152.factory;
 
 /**
- * 工厂方法模式
+ * 工厂方法模式（关注于产品的创建）
  * 同一种产品 两条标准线
  *
  * 1 只有Product的子类能被本工厂生成

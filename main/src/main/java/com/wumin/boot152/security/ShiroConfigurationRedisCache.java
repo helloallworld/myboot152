@@ -27,7 +27,7 @@ import java.util.Map;
 
 
 /**
- * 将cache从ehcache转到redis
+ * 将cache从ehcache转到redis ，其他与ShiroConfiguration一样
  *
  *  依赖
              <!-- shiro+redis缓存插件 -->
@@ -47,7 +47,7 @@ public class ShiroConfigurationRedisCache {
      * @param redisConfig
      * @return
      */
-    @Bean(name = "redisManager")
+   // @Bean(name = "redisManager")
     public RedisManager redisManager(RedisProperties redisConfig) {
         RedisManager redisManager = new RedisManager();
         redisManager.setHost(redisConfig.getHost());
@@ -64,14 +64,14 @@ public class ShiroConfigurationRedisCache {
      * 默认Session为30分钟
      * 使用的是shiro-redis开源插件
      */
-    @Bean(name = "sessionManager")
+    //@Bean(name = "sessionManager")
     public DefaultWebSessionManager sessionManager(RedisSessionDAO redisSessionDAO) {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
         sessionManager.setSessionDAO(redisSessionDAO);
         return sessionManager;
     }
 
-    @Bean(name = "redisCacheManager")
+    //@Bean(name = "redisCacheManager")
     public RedisCacheManager redisCacheManager(RedisManager redisConfig) {
         RedisCacheManager redisCacheManager = new RedisCacheManager();
         redisCacheManager.setRedisManager(redisConfig);
@@ -82,19 +82,19 @@ public class ShiroConfigurationRedisCache {
      * RedisSessionDAO shiro sessionDao层的实现 通过redis
      * 使用的是shiro-redis开源插件
      */
-    @Bean(name = "redisSessionDAO")
+   // @Bean(name = "redisSessionDAO")
     public RedisSessionDAO redisSessionDAO(RedisManager redisManager) {
         RedisSessionDAO redisSessionDAO = new RedisSessionDAO();
         redisSessionDAO.setRedisManager(redisManager);
         return redisSessionDAO;
     }
 
-    @Bean(name = "lifecycleBeanPostProcessor")
+    //@Bean(name = "lifecycleBeanPostProcessor")
     public LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
         return new LifecycleBeanPostProcessor();
     }
 
-    @Bean
+    //@Bean
     public DefaultAdvisorAutoProxyCreator getDefaultAdvisorAutoProxyCreator() {
         DefaultAdvisorAutoProxyCreator daap = new DefaultAdvisorAutoProxyCreator();
         daap.setProxyTargetClass(true);
@@ -102,8 +102,8 @@ public class ShiroConfigurationRedisCache {
     }
 
 
-    @Bean(name = "securityManager")
-    @Lazy
+    //@Bean(name = "securityManager")
+    //@Lazy
     public SecurityManager securityManagerMy(@Lazy SystemAuthorizingRealm systemAuthorizingRealm, CacheManager cacheManager, SessionManager sessionManager) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setCacheManager(cacheManager);
@@ -113,7 +113,7 @@ public class ShiroConfigurationRedisCache {
         return securityManager;
     }
 
-    @Bean
+    //@Bean
     public AuthorizationAttributeSourceAdvisor getAuthorizationAttributeSourceAdvisor(SecurityManager securityManager) {
         AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
         authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
@@ -147,7 +147,7 @@ public class ShiroConfigurationRedisCache {
      * @param securityManager
      * @return
      */
-    @Bean(name = "shiroFilter")
+    //@Bean(name = "shiroFilter")
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(DefaultWebSecurityManager securityManager,PermissionsService permissionsServcie) {
 
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
