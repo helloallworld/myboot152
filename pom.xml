@@ -19,6 +19,7 @@
         <module>dubbo-service2</module>
         <module>design-pattern</module>
         <module>aop-demo</module>
+        <module>no_db</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

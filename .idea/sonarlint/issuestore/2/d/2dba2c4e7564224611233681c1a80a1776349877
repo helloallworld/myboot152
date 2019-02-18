@@ -1,0 +1,6 @@
+
+¯%squid:RedundantThrowsDeclarationCheck3"yRemove the declaration of thrown exception 'org.apache.shiro.authc.AuthenticationException' which is a runtime exception.(¡ïË»ùÿÿÿÿ
+Asquid:S1481C"*Remove this unused "info1" local variable.(”ãÚ¥
+Psquid:S1854C"9Remove this useless assignment to local variable "info1".(”ãÚ¥
+qsquid:UselessImportCheck"HRemove this unused import 'com.wumin.boot152.common.util.PasswordUtils'.(æÆþòýÿÿÿÿ
+Zsquid:S1155<">Use isEmpty() to check whether the collection is empty or not.(ö¢¡ÿÿÿÿÿÿ

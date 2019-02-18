@@ -15,6 +15,7 @@
         <module name="dubbo-service2" />
         <module name="exchange" />
         <module name="main" />
+        <module name="no_db" />
         <module name="zipkin-demo" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="exchange" target="1.8" />
       <module name="main" target="1.8" />
       <module name="myboot152" target="1.8" />
+      <module name="no_db" target="1.8" />
       <module name="zipkin-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
