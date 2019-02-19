@@ -25,3 +25,9 @@ Dmain/src/main/java/com/wumin/boot152/controller/LoginController.java,c\2\c25da
 main/pom.xml,f\e\fe73465287b4c5a7d2f727a93d8c815476b83968
 u
 Emain/src/main/java/com/wumin/boot152/controller/UseKeyController.java,3\d\3d36a0b17ebfb35a5eb282a0b621edcf644b533f
+i
+9main/src/main/java/com/wumin/boot152/MainApplication.java,5\d\5d0b04c8272e1c854e32b3b42d202f1dcc2bfd41
+ƒ
+Sno_db/src/main/java/com/wumin/boot152/nginxTest/controller/NginxTestController.java,5\b\5b7b49a594bf64f2b4e3ca10c2f269fc7fbeb070
+_
+/no_db/src/main/resources/application.properties,2\4\24aa472203c94cccea0179052aa9aaa9a2c2a2c9
