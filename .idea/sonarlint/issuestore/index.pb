@@ -31,3 +31,9 @@ i
 Sno_db/src/main/java/com/wumin/boot152/nginxTest/controller/NginxTestController.java,5\b\5b7b49a594bf64f2b4e3ca10c2f269fc7fbeb070
 _
 /no_db/src/main/resources/application.properties,2\4\24aa472203c94cccea0179052aa9aaa9a2c2a2c9
+?
+no_db/no_db.iml,1\4\147e0a3040298e6031dedc6e4e6c705df965faf0
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+=
+no_db/pom.xml,c\3\c35faf37fb59c8b0b36ed51c7777ce93f4459e72

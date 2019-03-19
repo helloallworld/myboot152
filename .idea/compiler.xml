@@ -14,6 +14,7 @@
         <module name="dubbo-server" />
         <module name="dubbo-service2" />
         <module name="exchange" />
+        <module name="grpc-demo" />
         <module name="main" />
         <module name="no_db" />
         <module name="zipkin-demo" />
@@ -28,6 +29,7 @@
       <module name="dubbo-server" target="1.8" />
       <module name="dubbo-service2" target="1.8" />
       <module name="exchange" target="1.8" />
+      <module name="grpc-demo" target="1.8" />
       <module name="main" target="1.8" />
       <module name="myboot152" target="1.8" />
       <module name="no_db" target="1.8" />

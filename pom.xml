@@ -20,6 +20,7 @@
         <module>design-pattern</module>
         <module>aop-demo</module>
         <module>no_db</module>
+        <module>grpc-demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
