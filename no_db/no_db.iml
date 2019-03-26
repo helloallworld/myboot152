@@ -26,7 +26,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.jxls:jxls-poi:1.0.16" level="project" />
-    <orderEntry type="library" name="Maven: org.jxls:jxls:2.5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jxls:jxls:2.6.0-rc1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-jexl3:3.1" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.11" level="project" />
@@ -86,7 +87,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_131/lib/jconsole.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_201/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -95,7 +96,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_131/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_201/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
