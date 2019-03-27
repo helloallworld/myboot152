@@ -2,9 +2,10 @@ package com.wumin.boot152.nginxTest.controller;
 
 import com.wumin.boot152.nginxTest.services.AddPropertiesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @RestController
 @RequestMapping("nginx")
@@ -12,8 +13,9 @@ public class NginxTestController {
 
     @Autowired
     AddPropertiesService addPropertiesService;
-    @GetMapping("test")
-    public String test(){
+    @RequestMapping(value = "/test/{val}",method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
+    public String test(@PathVariable String val){
+        System.out.println(val);
         return "in nginx test1";
     }
     @GetMapping("addProperties")
