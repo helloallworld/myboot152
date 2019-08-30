@@ -19,6 +19,13 @@
             <artifactId>jxls-poi</artifactId>
             <version>${jxls.poi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ifly.qxb.uap</groupId>
+            <artifactId>ifly-sso-client</artifactId>
+            <version>1.0.1-RELEASE</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sso.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <resources>

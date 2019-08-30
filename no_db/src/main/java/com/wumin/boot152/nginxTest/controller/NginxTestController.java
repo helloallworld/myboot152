@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @RestController
-@RequestMapping("nginx")
+@RequestMapping
 public class NginxTestController {
 
     @Autowired
     AddPropertiesService addPropertiesService;
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "/logout")
     public String test( String val){
         System.out.println(val);
         return "in nginx test1";

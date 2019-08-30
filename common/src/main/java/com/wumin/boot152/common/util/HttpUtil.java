@@ -821,7 +821,7 @@ public class HttpUtil {
 
 
 		Long timestamp = DateUtils.getCurrentTimeMillis();
-		String appKey = "sinochem.erp.key";
+		String appKey = "aaa.key";
 
 		Map<String,String> signParams = new HashMap<String,String>();
 		signParams.putAll(contentParams);
@@ -855,7 +855,7 @@ public class HttpUtil {
 
 
 		Long timestamp = DateUtils.getCurrentTimeMillis();
-		String appKey = "sinochem.erp.key";
+		String appKey = "aaa.key";
 
 		Map<String,Object> signParams = new HashMap<String,Object>();
 		signParams.putAll(contentParams);

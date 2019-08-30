@@ -15,7 +15,7 @@ import java.io.ObjectOutputStream;
 import java.util.Date;
 import java.util.Properties;
 
-@Service
+//@Service
 public class OnsProducerServiceImp implements OnsProducerService {
 //    private Logger logger = LoggerFactory.getLogger(this.getClass());
 //    @Value("${openservices.ONSAddr}")

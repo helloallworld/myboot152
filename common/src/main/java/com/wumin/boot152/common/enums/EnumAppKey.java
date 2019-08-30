@@ -1,11 +1,11 @@
 package com.wumin.boot152.common.enums;
 
 /**
- * Created by zhujianbo on 2018/8/23.
+ *
  */
 public enum EnumAppKey {
 
-    ERP("sinochem.erp.key","5810B50A084419630624EF74643D1A0D");
+    ERP("aaa.key","sdafsdfasdgfadsf");
 
     EnumAppKey(String key, String value){
         this.key = key;
