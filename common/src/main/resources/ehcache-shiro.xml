@@ -17,7 +17,7 @@
         memoryStoreEvictionPolicy：缓存满了之后的淘汰算法。
     -->
 
-    <cache name="erpCache"
+    <cache name="demoCache"
            maxElementsInMemory="10000"
            eternal="true"
            overflowToDisk="false"

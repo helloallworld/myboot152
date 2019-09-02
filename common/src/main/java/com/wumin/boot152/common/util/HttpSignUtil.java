@@ -31,11 +31,11 @@ public class HttpSignUtil {
         else{
             signParams.putAll(contentParams);
         }
-        signParams.put("appKey", EnumAppKey.ERP.getKey());
+        signParams.put("appKey", EnumAppKey.DEMO.getKey());
         signParams.put("timestamp", String.valueOf(timestamp));
 
         Map<String, String> headerMap = new HashMap<String, String>();
-        headerMap.put("appKey", EnumAppKey.ERP.getKey());
+        headerMap.put("appKey", EnumAppKey.DEMO.getKey());
         headerMap.put("timestamp", String.valueOf(timestamp));
         if (BooleanUtils.isTrue(isContentTypeJson)) {
             headerMap.put("Content-type", "application/json; charset=UTF-8");
@@ -43,7 +43,7 @@ public class HttpSignUtil {
         headerMap.put("Accept", "application/json");
         String sign = null;
         try {
-            sign = SignUtil.sign(signParams, EnumAppKey.findByKey(EnumAppKey.ERP.getKey()).getValue());
+            sign = SignUtil.sign(signParams, EnumAppKey.findByKey(EnumAppKey.DEMO.getKey()).getValue());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,15 +76,15 @@ public class HttpSignUtil {
         if(contentParams!=null) {
             signParams.putAll(contentParams);
         }
-        signParams.put("appKey", EnumAppKey.ERP.getKey());
+        signParams.put("appKey", EnumAppKey.DEMO.getKey());
         signParams.put("timestamp", String.valueOf(timestamp));
 
         Map<String, String> headerMap = new HashMap<String, String>();
-        headerMap.put("appKey", EnumAppKey.ERP.getKey());
+        headerMap.put("appKey", EnumAppKey.DEMO.getKey());
         headerMap.put("timestamp", String.valueOf(timestamp));
         String sign = null;
         try {
-            sign = SignUtil.sign(signParams, EnumAppKey.findByKey(EnumAppKey.ERP.getKey()).getValue());
+            sign = SignUtil.sign(signParams, EnumAppKey.findByKey(EnumAppKey.DEMO.getKey()).getValue());
         } catch (Exception e) {
             e.printStackTrace();
         }

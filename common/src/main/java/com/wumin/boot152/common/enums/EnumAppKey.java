@@ -5,7 +5,7 @@ package com.wumin.boot152.common.enums;
  */
 public enum EnumAppKey {
 
-    ERP("aaa.key","sdafsdfasdgfadsf");
+    DEMO("aaa.key","sdafsdfasdgfadsf");
 
     EnumAppKey(String key, String value){
         this.key = key;
