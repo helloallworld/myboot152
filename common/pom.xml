@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot-starter-redis-version>1.3.2.RELEASE</spring-boot-starter-redis-version>
         <com.aliyun.oss>2.8.2</com.aliyun.oss>
-        <org.apache.shiro>1.3.2</org.apache.shiro>
+        <org.apache.shiro>1.8.0</org.apache.shiro>
         <spring-data-mongodb>2.0.2.RELEASE</spring-data-mongodb>
         <jxls.version>2.4.4</jxls.version>
         <jxls.poi.version>1.0.14</jxls.poi.version>
